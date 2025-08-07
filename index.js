@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const express = require('express') //imported or required express
 const app = express()  //created the variable app using express
-const port = 4000
+// const port = 4000
 
 app.get('/',(req, res) => {
     res.send("hello world")
@@ -22,6 +22,6 @@ app.get('/youtube',(req, res) => {
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`example app listening on port ${port}`);
+    console.log(`example app listening on port ${process.env.PORT}`);
     
 })
