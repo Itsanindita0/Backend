@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express') //imported or required express
 const app = express()  //created the variable app using express
 const port = 4000
@@ -19,7 +21,7 @@ app.get('/youtube',(req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
     console.log(`example app listening on port ${port}`);
     
 })
